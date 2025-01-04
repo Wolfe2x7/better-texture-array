@@ -2,8 +2,8 @@ tool
 extends EditorProperty
 
 const Layer = preload("res://addons/better-texture-array/ui/layer.gd")
-const CreateDialog = preload("res://addons/better-texture-array/ui/create_dialog.tscn")
-const EditDialog = preload("res://addons/better-texture-array/ui/edit_dialog.gd")
+const CREATE_DIALOG = preload("res://addons/better-texture-array/ui/create_dialog.tscn")
+const EDIT_DIALOG = preload("res://addons/better-texture-array/ui/edit_dialog.gd")
 var undo_redo: UndoRedo
 var create_button
 var create_dialog
@@ -25,8 +25,8 @@ func _init():
 	label = "Layers"
 	create_button = Button.new()
 	create_button.text = "Create"
-	create_dialog = CreateDialog.instance()
-	edit_dialog = EditDialog.new()
+	create_dialog = CREATE_DIALOG.instance()
+	edit_dialog = EDIT_DIALOG.new()
 
 	layer_box = VBoxContainer.new()
 	layer_list = VBoxContainer.new()

@@ -1,7 +1,7 @@
 tool
 extends EditorInspectorPlugin
 
-const Editor = preload("res://addons/better-texture-array/ui/editor.gd")
+const EDITOR = preload("res://addons/better-texture-array/ui/editor.gd")
 var undo_redo: UndoRedo
 
 func can_handle(object):
@@ -13,6 +13,6 @@ func parse_property(object, type, path, hint, hint_text, usage):
 	if path != "flags":
 		return
 	
-	var ed = Editor.new()
+	var ed = EDITOR.new()
 	ed.undo_redo = undo_redo
 	add_property_editor("data", ed)

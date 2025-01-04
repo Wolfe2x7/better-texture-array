@@ -1,6 +1,5 @@
 tool
 extends ResourceFormatSaver
-class_name TextureArraySaver
 
 func get_recognized_extensions(res: Resource) -> PoolStringArray:
 	return PoolStringArray(["texarr", "tex3d"]) if recognize(res) else PoolStringArray()
